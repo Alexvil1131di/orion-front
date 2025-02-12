@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import Logo from "../../assets/common/Logo";
 import { LoginServices } from "../../services/Auth/LoginServices";
 import { useEffect, useState } from "react";
 
@@ -38,10 +36,14 @@ const NavBar = ({ isAuth }: NavBarProps) => {
 
 
   return (
-    <nav className="flex justify-between h-14 px-4 items-center text-md lg:px-[180px] shadow-lg bg-white shadow-[#00000010] fixed inset-0 z-[99]">
+    <nav className="flex justify-between h-14 px-4 items-center text-md  shadow-lg bg-white shadow-[#00000010] fixed inset-0 z-[99]">
       <div className="flex items-center gap-2 ">
-        <Logo className=" w-[40px] h-[40px] fill-[#000]" />
-        <p className="text-[#000] font-semibold text-lg">ShortEnd</p>
+        <img
+          src="https://media.licdn.com/dms/image/v2/C4E0BAQFqyf2mpBoA-g/company-logo_200_200/company-logo_200_200/0/1630594711947/oriontek_logo?e=2147483647&v=beta&t=CfQM8JG6VzEwkxQHXzuquC8cOfF3NvYtXC3UwlFU9q0"
+          alt="Oriontek Logo"
+          className="h-14 w-14"
+        />
+        <p className="text-[#000] text-lg">Oriontek</p>
       </div>
 
       <ul className="flex gap-4 items-center">
@@ -55,6 +57,7 @@ const NavBar = ({ isAuth }: NavBarProps) => {
             <li>
               <button type="button" onClick={() => handleLogout()} className="bg-black px-4 py-2 text-white rounded-full" >Log Out</button>
             </li>
+
           </>
 
         }

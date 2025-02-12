@@ -7,16 +7,14 @@ import NavBar from "./components/common/navBar";
 
 import MainPage from "./pages";
 import Login from "./pages/Auth/Login";
-import UrlRedirect from "./pages/url/urlRedirect";
 
 import "react-toastify/dist/ReactToastify.css";
-import useRefreshToken from "./hooks/useRefreshToken";
 import Register from "./pages/Auth/Register";
+
 
 export default function App() {
   const pathName = window.location.pathname;
   const { isAuth } = useCheckAuth(pathName);
-  useRefreshToken(pathName);
 
   console.log("isAuth", isAuth);
 
@@ -42,7 +40,6 @@ export default function App() {
           <Routes>
             <Route path="/" element={<MainPage isAuth={isAuth}></MainPage>} />
             <Route path="/Auth/Login" element={<Login></Login>} />
-            <Route path="/LX/:token" element={<UrlRedirect></UrlRedirect>} />
 
             <Route path="/Auth/Register" element={<Register></Register>} />
             <Route path="/Partners" element={<></>} />

@@ -1,7 +1,8 @@
 import axios from "axios";
+import { addressesInterface } from "../interfaces/user-url-interface";
 
 export const postlogin = async (email: string, password: string) => {
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/auth/logIn`,
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/auth/login`,
         {
             email,
             password,
@@ -16,22 +17,22 @@ export const postlogin = async (email: string, password: string) => {
     return response.data;
 };
 
-export const postRegister = async (email: string, password: string, firstName: string, lastName: string) => {
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users`,
+export const postRegister = async (email: string, password: string, name: string, lastname: string, addresses: addressesInterface[]) => {
+    return axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/auth/signUp`,
         {
             email,
             password,
-            firstName,
-            lastName,
+            name,
+            lastname,
+            addresses,
         },
         {
             headers: {
                 "Content-Type": "application/json",
             },
         }
-    );
+    )
 
-    return response.data;
 }
 
 export const refreshToken = async (token: string) => {

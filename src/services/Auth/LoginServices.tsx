@@ -1,5 +1,6 @@
 import { postlogin, postRegister } from "../../api/Auth";
 import Cookies from "js-cookie";
+import { addressesInterface } from "../../interfaces/user-url-interface";
 
 export class LoginServices {
 
@@ -34,8 +35,10 @@ export class LoginServices {
         window.location.href = "/Auth/Login";
     }
 
-    async register(firstName: string, lastName: string) {
-        return postRegister(this.email, this.password, firstName, lastName).then((res) => {
+
+
+    async register(firstName: string, lastName: string, addresses: addressesInterface[]) {
+        return postRegister(this.email, this.password, firstName, lastName, addresses).then((res) => {
             return { response: res, error: null };
         }).catch((err) => {
             return { response: null, error: err };

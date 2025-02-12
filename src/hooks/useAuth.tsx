@@ -11,13 +11,14 @@ const useCheckAuth = (pathName: string) => {
         if (token && user) {
             setIsAuth(true);
             // Redirect authenticated users away from auth pages
-            if (["/Auth/Login", "/Auth/Register"].includes(pathName)) {
+            if (["/Auth/Login"].includes(pathName)) {
                 router("/");
             }
         } else {
             setIsAuth(false);
             // Redirect unauthenticated users trying to access protected routes
             if (!["/Auth/Login", "/Auth/Register"].includes(pathName)) {
+                Cookies.remove("token");
                 router("/Auth/Register");
             }
         }
