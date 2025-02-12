@@ -2,16 +2,16 @@
 FROM node:20-alpine
 
 # Set the working directory
-WORKDIR /url-short-front-end/app
+WORKDIR /orionTek-front/app
 
 # Copy package.json and package-lock.json to the container
-COPY package*.json /url-short-front-end/app
+COPY package*.json /orionTek-front/app
 
 # Install dependencies
 RUN npm install
 
 # Copy the rest of the application code to the container
-COPY . /url-short-front-end/app
+COPY . /orionTek-front/app
 
 # Build the application
 RUN npm run build
