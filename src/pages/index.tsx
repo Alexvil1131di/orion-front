@@ -41,7 +41,7 @@ export default function MainPage({ isAuth }: { isAuth: boolean }) {
 
 
   return (
-    <div className="flex flex-col gap-5 h-fit bg-gray-100 overflow-scroll">
+    <div className="flex flex-col gap-5 h-full bg-gray-100 overflow-scroll">
       {showCreate && <div className="fixed top-8 pt-8 left-0 right-0 bottom-0 flex flex-col bg-gray-100">
         <button type="button" onClick={() => { window.location.href = "/"; setUserToEdit(undefined) }} className="text-[24px] font-semibold underline text-left pl-4">Go Back</button>
         <Register title={userToEdit ? "Edit User" : "Create User"} userToEdit={userToEdit} setUserToEdit={setUserToEdit} />
@@ -50,7 +50,7 @@ export default function MainPage({ isAuth }: { isAuth: boolean }) {
         <h1 className=" font-bold text-[24px]"> Clients</h1>
         <button type="button" onClick={() => { setShowCreate(true) }} className="bg-blue-600 px-4 py-2 text-white rounded-full" >Create User</button>
       </div>
-      <div className="p-6 gap-4 flex flex-wrap ">
+      <div className="p-6 gap-4 flex flex-wrap justify-center md:justify-start">
         {users && users.map((user) => (
           <>
             <UserCard email={user.email} name={user.name} lastname={user.lastname} addresses={user.addresses} onEdit={() => onEdit(user)} onDelete={() => { onDelete(user.id) }} />
