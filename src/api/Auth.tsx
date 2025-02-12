@@ -1,5 +1,5 @@
 import axios from "axios";
-import { addressesInterface } from "../interfaces/user-url-interface";
+import { addressesInterface } from "../interfaces/interfaces";
 
 export const postlogin = async (email: string, password: string) => {
     const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/v1/auth/login`,

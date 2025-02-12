@@ -1,14 +1,4 @@
-export interface createUrlInterface {
-  userId?: string;
-  longUrl: string;
-}
 
-export interface UrlInterface {
-  id: string;
-  userId: string;
-  longUrl: string;
-  key: string;
-}
 
 export interface addressesInterface {
   id?: string;

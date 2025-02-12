@@ -1,6 +1,6 @@
 import { postlogin, postRegister } from "../../api/Auth";
 import Cookies from "js-cookie";
-import { addressesInterface } from "../../interfaces/user-url-interface";
+import { addressesInterface } from "../../interfaces/interfaces";
 
 export class LoginServices {
 

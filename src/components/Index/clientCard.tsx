@@ -1,5 +1,5 @@
 import React from 'react';
-import { addressesInterface } from '../../interfaces/user-url-interface';
+import { addressesInterface } from '../../interfaces/interfaces';
 
 interface UserCardProps {
     email: string;

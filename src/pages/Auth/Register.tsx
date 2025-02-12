@@ -2,8 +2,8 @@ import { Dispatch, FormEvent, SetStateAction, useEffect, useState } from "react"
 import { LoginServices } from "../../services/Auth/LoginServices";
 import ShowPasswordButton from "../../components/Auth/showPasswordButton";
 import { toast } from "react-toastify";
-import { addressesInterface, userInterface } from "../../interfaces/user-url-interface";
-import { ClientService } from "../../services/urls/clientService";
+import { addressesInterface, userInterface } from "../../interfaces/interfaces";
+import { ClientService } from "../../services/client/clientService";
 
 function Register({ userToEdit, title, setUserToEdit }: { userToEdit?: userInterface, title?: string, setUserToEdit?: Dispatch<SetStateAction<userInterface | undefined>> }) {
 

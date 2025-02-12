@@ -1,6 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { addressesInterface } from "../interfaces/user-url-interface";
+import { addressesInterface } from "../interfaces/interfaces";
 
 
 

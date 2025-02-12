@@ -1,6 +1,6 @@
 import axios from "axios";
 import { editClient } from "../../api/Client";
-import { addressesInterface } from "../../interfaces/user-url-interface";
+import { addressesInterface } from "../../interfaces/interfaces";
 import Cookies from "js-cookie";
 
 export class ClientService {

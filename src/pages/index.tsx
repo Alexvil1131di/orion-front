@@ -2,9 +2,9 @@
 
 import { getUsers } from "../api/Client";
 import { useEffect, useState } from "react";
-import { ClientService } from "../services/urls/clientService";
+import { ClientService } from "../services/client/clientService";
 import { toast } from "react-toastify";
-import { userInterface } from "../interfaces/user-url-interface";
+import { userInterface } from "../interfaces/interfaces";
 import UserCard from "../components/Index/clientCard";
 import Register from "./Auth/Register";
 
